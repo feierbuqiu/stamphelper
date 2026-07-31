@@ -16,11 +16,10 @@ updates:
           - minor
           - patch
     ignore:
-      # vinext is pre-1.0; its minor releases can change build output contracts.
+      # vinext releases after 0.0.50 change the static build output contract.
       - dependency-name: vinext
-        update-types:
-          - version-update:semver-minor
-          - version-update:semver-major
+        versions:
+          - '> 0.0.50'
       - dependency-name: '*'
         update-types:
           - version-update:semver-major
