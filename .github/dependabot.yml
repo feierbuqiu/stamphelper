@@ -8,6 +8,17 @@ updates:
       time: '09:00'
       timezone: Australia/Sydney
     open-pull-requests-limit: 5
+    groups:
+      compatible-updates:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch
+    ignore:
+      - dependency-name: '*'
+        update-types:
+          - version-update:semver-major
     commit-message:
       prefix: deps
 
