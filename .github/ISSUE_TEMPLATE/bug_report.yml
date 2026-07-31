@@ -1,0 +1,62 @@
+name: Bug report
+description: Report a reproducible calculation, interface, build, or deployment problem.
+title: '[Bug]: '
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting a problem. Remove addresses, tracking numbers, receipts, credentials, and other personal information.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Postage calculation
+        - Stamp optimization or inventory
+        - Destination search or route availability
+        - Interface or accessibility
+        - Build, deployment, or Worker
+        - Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide the smallest sequence of inputs and actions that reproduces the problem.
+      placeholder: Product, origin, destination, mode, contents, weight, extras, inventory, then observed result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Rate or routing evidence
+      description: For data disagreements, link the public source and state its observation/effective date.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Browser version, operating system, deployed or local build
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed personal postal data, credentials, and sensitive screenshots.
+          required: true
+        - label: This report does not contain a security vulnerability; security issues will be reported privately.
+          required: true

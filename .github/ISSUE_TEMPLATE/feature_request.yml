@@ -1,0 +1,40 @@
+name: Feature request
+description: Propose a focused product, data, accessibility, or engineering improvement.
+title: '[Feature]: '
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem or missing postal scenario should be addressed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the smallest useful behavior and any alternatives considered.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Postal-data evidence
+      description: If applicable, link a public source and state its observation/effective date.
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Privacy, security, performance, and accessibility impact
+      description: Explain any new network calls, stored data, dependencies, long-running work, or interaction changes.
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This request does not include private postal records or credentials.
+          required: true
